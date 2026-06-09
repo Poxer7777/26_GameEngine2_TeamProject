@@ -5,20 +5,35 @@ using UnityEngine;
 
 public class TetrisManager : MonoBehaviour
 {
+    public static TetrisManager instance;
+
     [Header("Game Settings")]
     public float gameTime = 10f;
     private float currentTime;
-    private int clearedLines = 0;
-    public bool isGame = true;
+    public int clearedLines = 0;
+    public bool isGame;
 
     [Header("UI Reference")]
     public TextMeshProUGUI timerText;
 
 
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     void Start()
     {
         gameTime = 10f;
         currentTime = gameTime;
+
+        isGame = true;
+
+        BoardData.InitializeRandomLines();
+        FindObjectOfType<SpawnBrick>().SpawnTetrisBrick();
     }
 
     void Update()
@@ -43,8 +58,15 @@ public class TetrisManager : MonoBehaviour
                 Invoke(nameof(Fail), 2f);
             }
         }
-    }
 
+        // 타이머 업데이트
+        if (isGame)
+        {
+            currentTime -= Time.deltaTime;
+        }
+
+        timerText.text = $"Time: {Mathf.Max(0, currentTime):F1}";
+    }
 
     void Clear()
     {

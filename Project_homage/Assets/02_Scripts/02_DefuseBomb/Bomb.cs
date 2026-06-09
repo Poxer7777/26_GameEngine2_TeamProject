@@ -5,7 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using static Bomb;
+using static BombLine;
 
 public class Bomb : MonoBehaviour
 {
@@ -13,12 +13,6 @@ public class Bomb : MonoBehaviour
 
     int countWire = 1;
     command trig;
-
-    public enum wireType
-    {
-        Red,
-        Blue
-    }
     public enum command
     {
         CutRed,

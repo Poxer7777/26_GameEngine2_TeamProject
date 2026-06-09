@@ -20,7 +20,7 @@ public class BlasterSpawner : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        RandomBlastPattern();
+        Invoke(nameof(RandomBlastPattern), 1f);
     }
 
     void RandomBlastPattern()
@@ -31,17 +31,17 @@ public class BlasterSpawner : MonoBehaviour
             case 1:
                 patternCoroutine =
                     StartCoroutine(SpawnBlasterRoutine1());
-                SansManager.Instance.currentTime = 8f;
+                SansManager.Instance.currentTime = 9f;
                 break;
             case 2:
                 patternCoroutine =
                     StartCoroutine(SpawnBlasterRoutine2());
-                SansManager.Instance.currentTime = 10f;
+                SansManager.Instance.currentTime = 11f;
                 break;
             case 3:
                 patternCoroutine =
                     StartCoroutine(SpawnBlasterRoutine3());
-                SansManager.Instance.currentTime = 4f;
+                SansManager.Instance.currentTime = 5f;
                 break;
         }
     }
@@ -290,9 +290,6 @@ public class BlasterSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!SansManager.Instance.isGame)
-        {
-            StopCoroutine(patternCoroutine);
-        }
+        
     }
 }

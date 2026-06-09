@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/01_Scenes/03_Accept.unity
     guid: f5db856df0e552d42ac2fabb48f708d1
   - enabled: 1
+    path: Assets/01_Scenes/04_Tetris.unity
+    guid: 821597b711ab7af44bd10417c6523b0d
+  - enabled: 1
+    path: Assets/01_Scenes/05_Rhythm.unity
+    guid: 6505eb73a97cf854c903a9bf80f5c7aa
+  - enabled: 1
+    path: Assets/01_Scenes/06_Fruit.unity
+    guid: e094b9c441fca2f47b2a87f0cdcae356
+  - enabled: 1
     path: Assets/01_Scenes/GameOver.unity
     guid: 8bf3401d94cba7448937b73d2dc1e9c3
   m_configObjects: {}

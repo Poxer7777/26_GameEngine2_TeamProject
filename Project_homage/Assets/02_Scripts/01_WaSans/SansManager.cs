@@ -21,6 +21,7 @@ public class SansManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentTime = 1.1f;
         isGame = true;
         gameOver = false;
     }

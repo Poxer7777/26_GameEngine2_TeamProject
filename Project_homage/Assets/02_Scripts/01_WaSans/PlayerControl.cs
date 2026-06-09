@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerControl : MonoBehaviour
 {
+    public GameObject player;
     CharacterController controller;
 
     float horizontalInput;
@@ -26,6 +28,16 @@ public class PlayerControl : MonoBehaviour
         {
             move = transform.right * horizontalInput + transform.forward * verticalInput;
             controller.Move(move * moveSpeed * Time.deltaTime);
+        }
+
+        if (move.magnitude > 0.05f)
+        {
+            Vector3 lookDirection = new Vector3(move.x, 0, move.z);
+
+            Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+
+            float rotationSpeed = 15f;
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 }

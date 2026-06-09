@@ -26,17 +26,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1078.179
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
         type: 3}
@@ -81,7 +81,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
         type: 3}
       propertyPath: m_Name
-      value: Watermelon
+      value: Level4_Watermelon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fruit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -91,6 +96,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1058370698704617569}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 325757465089038517}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 645a4a4d563d5a44eb598339a6dc2ccb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 904481151843050933}
   m_SourcePrefab: {fileID: 100100000, guid: 645a4a4d563d5a44eb598339a6dc2ccb, type: 3}
 --- !u!1 &8387045944480903401 stripped
 GameObject:
@@ -119,3 +132,44 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &325757465089038517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387045944480903401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77aab6cc5b851f54791e845effc54478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3
+  isMerged: 0
+--- !u!54 &904481151843050933
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387045944480903401}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
